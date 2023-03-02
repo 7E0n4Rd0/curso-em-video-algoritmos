@@ -1,17 +1,20 @@
 algoritmo "atividade15"
-//16) [DESAFIO] Escreva um programa para calcular a reduÁ„o do tempo de vida de um
+//16) [DESAFIO] Escreva um programa para calcular a redu√ß√£o do tempo de vida de um
 //fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele
-//j· fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule
-//quantos dias de vida um fumante perder· e exiba o total em dias.
+//j√° fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule
+//quantos dias de vida um fumante perder√° e exiba o total em dias.
 var
-c,a,ct: inteiro
-r: real
+cigarros,anos,cigarros_tempo,anos_dia,tempo_restante : inteiro
 inicio
 escreva("Digite a quantidade de cigarros fumados por dias: ")
-leia(c)
-escreva("A quantos anos vocÍ fuma cigarro? ")
-leia(a)
-ct <- c*10
-r <-ct/a
-escreva("VocÍ ira viver somente por mais",r," dias se continuar fumando :)")
+leia(cigarros)
+escreva("A quantos anos voc√™ fuma cigarro? ")
+leia(anos)
+cigarros_tempo <- cigarros*10
+anos_dia <- anos*365
+tempo_restante <- (cigarros_tempo*1440) - anos_dia
+escreva("Voc√™ ira viver somente por mais",tempo_restante," dias se continuar fumando :)")
+//02/03/23 - Corre√ß√£o da atividade, fui refazer ela em python e no Python estava certo
+//e aqui est√° errado o racioc√≠nio, vamos arrumar. - 17:11
+//Agora est√° arrumado e certinho :) - 17:15
 fimalgoritmo
