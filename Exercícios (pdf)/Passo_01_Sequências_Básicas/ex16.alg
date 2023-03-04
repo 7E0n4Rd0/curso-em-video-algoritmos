@@ -4,17 +4,21 @@ algoritmo "atividade15"
 //já fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule
 //quantos dias de vida um fumante perderá e exiba o total em dias.
 var
-cigarros,anos,cigarros_tempo,anos_dia,tempo_restante : inteiro
+cigarros,anos: inteiro
+cigarros_tempo,anos_dia,dias_perdidos : real
 inicio
 escreva("Digite a quantidade de cigarros fumados por dias: ")
 leia(cigarros)
 escreva("A quantos anos você fuma cigarro? ")
 leia(anos)
-cigarros_tempo <- cigarros*10
-anos_dia <- anos*365
-tempo_restante <- (cigarros_tempo*1440) - anos_dia
-escreva("Você ira viver somente por mais",tempo_restante," dias se continuar fumando :)")
+cigarros_tempo <- (cigarros*10)/60
+anos_dia <- (anos*365)/24
+dias_perdidos <- (cigarros_tempo*anos_dia)
+escreval("Você perdeu ",dias_perdidos:2," por causa desta rotina de fumar ",cigarros," cigarros por dia e durante",anos," ano(s)")
 //02/03/23 - Correção da atividade, fui refazer ela em python e no Python estava certo
 //e aqui está errado o raciocínio, vamos arrumar. - 17:11
-//Agora está arrumado e certinho :) - 17:15
+
+//04/03/23 - eu fiz os calculos e vi que estava meio errado, de novo, e interpretei errado o enunciado.
+//esta semana aconteceu muita coisa, como provas, listas de exercícios e eu ter conseguido uma vaga num curso técnico.
+//Agora REALMENTE está tudo certo. - 08:34
 fimalgoritmo
