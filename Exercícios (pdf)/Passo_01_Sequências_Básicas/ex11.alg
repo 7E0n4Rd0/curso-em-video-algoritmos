@@ -1,5 +1,5 @@
 algoritmo "atividade11"
-//11) Desenvolva uma lógica que leia os valores de A, B e C de uma equação do
+//11) Desenvolva uma lÃ³gica que leia os valores de A, B e C de uma equaÃ§Ã£o do
 //segundo grau e mostre o valor de Delta.
 var
 a,b,c: inteiro
@@ -12,5 +12,5 @@ leia(b)
 escreva("Informe o valor de c: ")
 leia(c)
 d <- (b^2-4*a*c)
-escreva("O valor de Delata é:",d)
+escreva("O valor de Delta Ã©:",d)
 fimalgoritmo
