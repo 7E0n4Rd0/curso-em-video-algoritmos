@@ -1,27 +1,31 @@
 algoritmo "Atividade33"
-//33) Escreva um programa para aprovar ou n„o o emprÈstimo banc·rio para a compra
-//de uma casa. O programa vai perguntar o valor da casa, o sal·rio do comprador e
-//em quantos anos ele vai pagar. Calcule o valor da prestaÁ„o mensal, sabendo que
-//ela n„o pode exceder 30% do sal·rio ou ent„o o emprÈstimo ser· negado.
+//33) Escreva um programa para aprovar ou n√£o o empr√©stimo banc√°rio para a compra
+//de uma casa. O programa vai perguntar o valor da casa, o sal√°rio do comprador e
+//em quantos anos ele vai pagar. Calcule o valor da presta√ß√£o mensal, sabendo que
+//ela n√£o pode exceder 30% do sal√°rio ou ent√£o o empr√©stimo ser√° negado.
 var
-c,s,t,j: real
+casa,salario,anos,taxa,emprestimo: real
 inicio
 escreval("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-escreval("                     EMPR…STIMO BANC¡RIO                           ")
+escreval("                     EMPR√âSTIMO BANC√ÅRIO                           ")
 escreval("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 escreva("Digite o valor da casa: ")
-leia(c)
-escreva("Digite o valor do sal·rio: ")
-leia(s)
+leia(casa)
+escreva("Digite o valor do sal√°rio: ")
+leia(salario)
 escreva("Em quantos anos vai pagar: ")
-leia(t)
-j <- s*(30/100)*t
+leia(anos)
+anos <- anos*12
+emprestimo <- casa/anos
+taxa <- (salario*30)/100
 escreval("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-escreval("A prestaÁ„o mensal ser· de R$",j)
-se (j > (s*30/100)) entao
-   escreval("N„o ser· possÌvel efetuar o emprÈstimo.")
+escreval("A presta√ß√£o mensal ser√° de R$",emprestimo)
+se (emprestimo > taxa) entao
+   escreval("N√£o ser√° poss√≠vel efetuar o empr√©stimo.")
 senao
-   escreval("… possÌvel efetuar o emprÈstimo.")
+   se (emprestimo <= taxa) entao
+      escreval("√â poss√≠vel efetuar o empr√©stimo.")
+   fimse
 fimse
 escreval("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 fimalgoritmo
